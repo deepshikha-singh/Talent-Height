@@ -27,3 +27,21 @@ def setting(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def sdetails(request):
+    return render(request, 's-details.html')
+
+def signle(request):
+    return render(request, 'signle.html')
+
+def single(request):
+    return render(request, 'single.html')
+
+def signup(request):
+    return render(request, 'sign-up.html')
+
+def watch(request):
+    return render(request, 'watch-video.html')
+
+def index2(request):
+    return render(request, 'index-2.html')

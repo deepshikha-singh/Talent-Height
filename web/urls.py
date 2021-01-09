@@ -14,6 +14,18 @@ urlpatterns = [
     path('reset-password/', views.manage, name='reset' ),
     path('setting/', views.manage, name='setting' ),
     path('login/', views.manage, name='login' ),
+    path('show-details/', views.manage, name='s-details' ),
+    path('show-signle/', views.manage, name='signle' ),
+    path('show-single/', views.manage, name='single' ),
+    path('sign-up/', views.manage, name='sign-up' ),
+    path('watch-video/', views.manage, name='watch' ),
+    path('index-2/', views.manage, name='index-2' )
+
+
+
+
+
+
 
 
 
