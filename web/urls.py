@@ -9,6 +9,10 @@ urlpatterns = [
     path('register-into-talentheight', views.signup, name='signup'),
     path('login-into-talentheight', views.signin, name='signin'),
 
+
+
+
+
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += staticfiles_urlpatterns()
