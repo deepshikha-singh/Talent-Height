@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
+from django.contrib.auth import views as auth_views
 from django.contrib.auth import logout
 from django.http import HttpResponse, JsonResponse
 from django.conf import settings
@@ -49,6 +50,5 @@ def signin (request):
 
 def log_out(request):
     logout(request)
-    messages.success(request, "Successfully Logged Out")
-    
+    messages.success(request, "Successfully Logged Out")   
     return redirect('index')
