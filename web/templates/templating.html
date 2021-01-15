@@ -49,6 +49,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                            <div class="menu-main-menu-container">
                               <ul id="top-menu" class="navbar-nav ml-auto">
+                                 <li>{{ request.user.username }}</li>
                                  <li class="menu-item">
                                     <a href="#">Home</a>
                                  </li>
@@ -130,16 +131,15 @@
                                           </div>
                                        </div>
                                     </li>
-                                    <li>
-                                       <a href="#" class="iq-user-dropdown search-toggle d-flex align-items-center">
-                                       <img src="{% static 'images/user/user.png' %}" class="img-fluid avatar-40 rounded-circle"
-                                          alt="user">
+                                    {% if request.user.is_authenticated %}
+                                    <li class="nav-item nav-icon iq-show">
+                                       <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center active" data-toggle="search-toggle">
+                                       <img src="{% static 'images/user/user.jpg' %}" class="img-fluid avatar-40 rounded-circle" alt="user">
                                        </a>
-                                    </li>
-                                    <!--<div class="iq-sub-dropdown iq-user-dropdown">
+                                       <div class="iq-sub-dropdown iq-user-dropdown">
                                           <div class="iq-card shadow-none m-0">
                                              <div class="iq-card-body p-0 pl-3 pr-3">
-                                                <a href="#" class="iq-sub-card setting-dropdown">
+                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-file-user-line text-primary"></i>
@@ -149,7 +149,7 @@
                                                       </div>
                                                    </div>
                                                 </a>
-                                                <a href="#" class="iq-sub-card setting-dropdown">
+                                                <a href="setting.html" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-settings-4-line text-primary"></i>
@@ -159,7 +159,7 @@
                                                       </div>
                                                    </div>
                                                 </a>
-                                                <a href="#" class="iq-sub-card setting-dropdown">
+                                                <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-settings-4-line text-primary"></i>
@@ -169,20 +169,28 @@
                                                       </div>
                                                    </div>
                                                 </a>
-                                                <a href="#" class="iq-sub-card setting-dropdown">
+                                                <a href="login.html" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-logout-circle-line text-primary"></i>
                                                       </div>
                                                       <div class="media-body ml-3">
-                                                         <h6 class="mb-0">Logout</h6>
+                                                         <h6 class="mb-0 ">Logout</h6>
                                                       </div>
                                                    </div>
                                                 </a>
                                              </div>
                                           </div>
-                                       </div> -->
+                                       </div>
                                     </li>
+                                    {% else %}
+                                    <li>
+                                       <a href="#" class="iq-user-dropdown search-toggle d-flex align-items-center">
+                                       Login
+                                       </a>
+                                    </li>
+                                    {% endif %}
+
                                  </ul>
                               </div>
                            </div>
@@ -250,58 +258,66 @@
                                     </div>
                                  </div>
                               </li>
-                              <li class="nav-item nav-icon"> 
-                                 <a href="{% url 'signup' %}">                                
-                                    <img src="{% static 'images/user/user.jpg' %}" class="img-fluid avatar-40 rounded-circle" alt="user">
-                                 </a>
-                              </li>
-                                 <!--<div class="iq-sub-dropdown iq-user-dropdown">
-                                    <div class="iq-card shadow-none m-0">
-                                       <div class="iq-card-body p-0 pl-3 pr-3">
-                                          <a href="#" class="iq-sub-card setting-dropdown">
-                                             <div class="media align-items-center">
-                                                <div class="right-icon">
-                                                   <i class="ri-file-user-line text-primary"></i>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                   <h6 class="mb-0 ">Manage Profile</h6>
-                                                </div>
+                              {% if request.user.is_authenticated %}
+                                    <li class="nav-item nav-icon iq-show">
+                                       <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center active" data-toggle="search-toggle">
+                                       <img src="{% static 'images/user/user.jpg' %}" class="img-fluid avatar-40 rounded-circle" alt="user">
+                                       </a>
+                                       <div class="iq-sub-dropdown iq-user-dropdown">
+                                          <div class="iq-card shadow-none m-0">
+                                             <div class="iq-card-body p-0 pl-3 pr-3">
+                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                                   <div class="media align-items-center">
+                                                      <div class="right-icon">
+                                                         <i class="ri-file-user-line text-primary"></i>
+                                                      </div>
+                                                      <div class="media-body ml-3">
+                                                         <h6 class="mb-0 ">Manage Profile</h6>
+                                                      </div>
+                                                   </div>
+                                                </a>
+                                                <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                   <div class="media align-items-center">
+                                                      <div class="right-icon">
+                                                         <i class="ri-settings-4-line text-primary"></i>
+                                                      </div>
+                                                      <div class="media-body ml-3">
+                                                         <h6 class="mb-0 ">Settings</h6>
+                                                      </div>
+                                                   </div>
+                                                </a>
+                                                <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                                   <div class="media align-items-center">
+                                                      <div class="right-icon">
+                                                         <i class="ri-settings-4-line text-primary"></i>
+                                                      </div>
+                                                      <div class="media-body ml-3">
+                                                         <h6 class="mb-0 ">Pricing Plan</h6>
+                                                      </div>
+                                                   </div>
+                                                </a>
+                                                <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                   <div class="media align-items-center">
+                                                      <div class="right-icon">
+                                                         <i class="ri-logout-circle-line text-primary"></i>
+                                                      </div>
+                                                      <div class="media-body ml-3">
+                                                         <h6 class="mb-0 ">Logout</h6>
+                                                      </div>
+                                                   </div>
+                                                </a>
                                              </div>
-                                          </a>
-                                          <a href="#" class="iq-sub-card setting-dropdown">
-                                             <div class="media align-items-center">
-                                                <div class="right-icon">
-                                                   <i class="ri-settings-4-line text-primary"></i>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                   <h6 class="mb-0 ">Settings</h6>
-                                                </div>
-                                             </div>
-                                          </a>
-                                          <a href="#" class="iq-sub-card setting-dropdown">
-                                             <div class="media align-items-center">
-                                                <div class="right-icon">
-                                                   <i class="ri-settings-4-line text-primary"></i>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                   <h6 class="mb-0 ">Pricing Plan</h6>
-                                                </div>
-                                             </div>
-                                          </a>
-                                          <a href="#" class="iq-sub-card setting-dropdown">
-                                             <div class="media align-items-center">
-                                                <div class="right-icon">
-                                                   <i class="ri-logout-circle-line text-primary"></i>
-                                                </div>
-                                                <div class="media-body ml-3">
-                                                   <h6 class="mb-0 ">Logout</h6>
-                                                </div>
-                                             </div>
-                                          </a>
+                                          </div>
                                        </div>
-                                    </div>
-                                 </div>-->
-                           </ul>
+                                    </li>
+                                    {% else %}
+                                    <li class="nav-item nav-icon"> 
+                                       <a href="{% url 'signup' %}">                                
+                                       Login
+                                       </a>
+                                    </li>
+                                    {% endif %}
+                                  </ul>
                         </div>
                      </nav>
                      <div class="nav-overlay"></div>

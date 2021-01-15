@@ -22,6 +22,15 @@
                <div class="sign-in-page-data">
                   <div class="sign-in-from w-100 m-auto">
                      <h3 class="mb-3 text-center">Sign Up</h3>
+                     <center>
+                        {% if messages %}
+
+                           {% for msg in messages %}
+                              <code> {{  msg  }} </code>
+                           {% endfor %}
+
+                        {% endif %}
+                     </center>
                      <form class="mt-4" action="{% url 'signup' %}" method="POST">
                         {% csrf_token %}
                         <div class="row">
