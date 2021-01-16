@@ -50,10 +50,10 @@
                                     <a href="{% url 'index-2' %}">Home</a>
                                  </li>
                                  <li class="menu-item">
-                                    <a href="{% url 'show' %}">Tv Shows</a>
+                                    <a href="{% url 'show-category' %}">Tv Shows</a>
                                  </li>
                                  <li class="menu-item">
-                                    <a href="{% url 'movie' %}">Movies</a>
+                                    <a href="{% url 'movie-category' %}">Movies</a>
                                  </li>
                               </ul>
                            </div>
@@ -135,7 +135,7 @@
                                        <div class="iq-sub-dropdown iq-user-dropdown">
                                           <div class="iq-card shadow-none m-0">
                                              <div class="iq-card-body p-0 pl-3 pr-3">
-                                                <a href="{% url 'manage' %}" class="iq-sub-card setting-dropdown">
+                                                <a href="{% url 'manage-profile' %}" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-file-user-line text-primary"></i>
@@ -254,7 +254,7 @@
                                  <div class="iq-sub-dropdown iq-user-dropdown">
                                     <div class="iq-card shadow-none m-0">
                                        <div class="iq-card-body p-0 pl-3 pr-3">
-                                          <a href="{% url 'manage' %}" class="iq-sub-card setting-dropdown">
+                                          <a href="{% url 'manage-profile' %}" class="iq-sub-card setting-dropdown">
                                              <div class="media align-items-center">
                                                 <div class="right-icon">
                                                    <i class="ri-file-user-line text-primary"></i>
@@ -454,7 +454,7 @@
                <div class="row">
                   <div class="col-sm-12 overflow-hidden">
                      <div class="iq-main-header d-flex align-items-center justify-content-between">
-                        <h4 class="main-title"><a href="{% url 'movie' %}">Your Favorites</a></h4>                      
+                        <h4 class="main-title"><a href="{% url 'movie-category' %}">Your Favorites</a></h4>                      
                      </div>
                      <div class="favorites-contens">
                         <ul class="favorites-slider list-inline  row p-0 mb-0">
@@ -613,7 +613,7 @@
                <div class="row">
                   <div class="col-sm-12 overflow-hidden">
                      <div class="iq-main-header d-flex align-items-center justify-content-between">                        
-                        <h4 class="main-title"><a href="{% url 'movie' %}">Upcoming Movies</a></h4>
+                        <h4 class="main-title"><a href="{% url 'movie-category' %}">Upcoming Movies</a></h4>
                      </div>
                      <div class="upcoming-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
@@ -936,7 +936,7 @@
                <div class="row">
                   <div class="col-sm-12 overflow-hidden">
                      <div class="iq-main-header d-flex align-items-center justify-content-between">                       
-                        <h4 class="main-title"><a href="{% url 'show' %}">Suggested For You</a></h4>                       
+                        <h4 class="main-title"><a href="{% url 'show-category' %}">Suggested For You</a></h4>                       
                      </div>
                      <div class="suggestede-contens">
                         <ul class="list-inline favorites-slider row p-0 mb-0">
@@ -1131,7 +1131,7 @@
                <div class="row">
                   <div class="col-sm-12 overflow-hidden">
                      <div class="iq-main-header d-flex align-items-center justify-content-between">                      
-                        <h4 class="main-title"><a href="{% url 'show' %}">Trending</a></h4>                        
+                        <h4 class="main-title"><a href="{% url 'show-category' %}">Trending</a></h4>                        
                      </div>
                      <div class="trending-contens">
                         <ul id="trending-slider-nav" class="list-inline p-0 mb-0 row align-items-center">
@@ -3933,7 +3933,7 @@
                <div class="row">
                   <div class="col-sm-12 overflow-hidden">
                      <div class="iq-main-header d-flex align-items-center justify-content-between">                        
-                        <h4 class="main-title"><a href="{% url 'show' %}">TV Thrillers</a></h4>                        
+                        <h4 class="main-title"><a href="{% url 'show-category' %}">TV Thrillers</a></h4>                        
                      </div>
                      <div class="tvthrillers-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
@@ -4086,8 +4086,8 @@
                   <div class="col-lg-3 col-md-4">
                      <ul class="f-link list-unstyled mb-0">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="{% url 'movie' %}">Movies</a></li>
-                        <li><a href="{% url 'show' %}">Tv Shows</a></li>
+                        <li><a href="{% url 'movie-category' %}">Movies</a></li>
+                        <li><a href="{% url 'show-category' %}">Tv Shows</a></li>
                         <li><a href="#">Coporate Information</a></li>
                      </ul>
                   </div>

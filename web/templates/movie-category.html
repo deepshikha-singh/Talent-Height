@@ -49,10 +49,10 @@
                                  <a href="{% url 'index-2' %}">Home</a>
                               </li>
                               <li class="menu-item">
-                                 <a href="{% url 'show' %}">Tv Shows</a>
+                                 <a href="{% url 'show-category' %}">Tv Shows</a>
                               </li>
                               <li class="menu-item">
-                                 <a href="{% url 'movie' %}">Movies</a>
+                                 <a href="{% url 'movie-category' %}">Movies</a>
                               </li>
                            </ul>
                         </div>
@@ -134,7 +134,7 @@
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                        <div class="iq-card shadow-none m-0">
                                           <div class="iq-card-body p-0 pl-3 pr-3">
-                                             <a href="{% url 'manage' %}" class="iq-sub-card setting-dropdown">
+                                             <a href="{% url 'manage-profile' %}" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-file-user-line text-primary"></i>
@@ -250,7 +250,7 @@
                               <div class="iq-sub-dropdown iq-user-dropdown">
                                  <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0 pl-3 pr-3">
-                                       <a href="{% url 'manage' %}" class="iq-sub-card setting-dropdown">
+                                       <a href="{% url 'manage-profile' %}" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-file-user-line text-primary"></i>
@@ -308,7 +308,7 @@
    <section class="iq-main-slider p-0">
       <div id="tvshows-slider">
          <div>
-            <a href="{% url 'movie' %}">
+            <a href="{% url 'movie-category' %}">
                <div class="shows-img">
                   <img src="{% static 'images/movie-banner/1.jpg' %}" class="w-100" alt="">
                   <div class="shows-content">
@@ -322,7 +322,7 @@
             </a>
          </div>
          <div>
-            <a href="{% url 'movie' %}">
+            <a href="{% url 'movie-category' %}">
                <div class="shows-img">
                   <img src="{% static 'images/movie-banner/2.jpg' %}" class="w-100" alt="">
                   <div class="shows-content">
@@ -336,7 +336,7 @@
             </a>
          </div>
          <div>
-            <a href="{% url 'movie' %}">
+            <a href="{% url 'movie-category' %}">
                <div class="shows-img">
                   <img src="{% static 'images/movie-banner/3.jpg' %}" class="w-100" alt="">
                   <div class="shows-content">
@@ -384,7 +384,7 @@
                   <div class="favorites-contens">
                      <ul class="favorites-slider list-inline  row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/upcoming/01.jpg' %}" class="img-fluid" alt="">
@@ -412,7 +412,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/upcoming/02.jpg' %}" class="img-fluid" alt="">
@@ -441,7 +441,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/upcoming/03.jpg' %}" class="img-fluid" alt="">
@@ -470,7 +470,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/upcoming/04.jpg' %}" class="img-fluid" alt="">
@@ -499,7 +499,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/upcoming/05.jpg' %}" class="img-fluid" alt="">
@@ -543,7 +543,7 @@
                   <div class="upcoming-contens">
                      <ul class="favorites-slider list-inline row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/01.jpg' %}" class="img-fluid" alt="">
@@ -571,7 +571,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/02.jpg' %}" class="img-fluid" alt="">
@@ -599,7 +599,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/03.jpg' %}" class="img-fluid" alt="">
@@ -627,7 +627,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/04.jpg' %}" class="img-fluid" alt="">
@@ -655,7 +655,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/05.jpg' %}" class="img-fluid" alt="">
@@ -698,7 +698,7 @@
                   <div class="suggestede-contens">
                      <ul class="list-inline favorites-slider row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/06.jpg' %}" class="img-fluid" alt="">
@@ -726,7 +726,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/07.jpg' %}" class="img-fluid" alt="">
@@ -754,7 +754,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/08.jpg' %}" class="img-fluid" alt="">
@@ -782,7 +782,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/09.jpg' %}" class="img-fluid" alt="">
@@ -810,7 +810,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'movie' %}">
+                           <a href="{% url 'movie-category' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{% static 'images/movies/10.jpg' %}" class="img-fluid" alt="">
@@ -851,8 +851,8 @@
                <div class="col-lg-3 col-md-4">
                   <ul class="f-link list-unstyled mb-0">
                      <li><a href="#">About Us</a></li>
-                     <li><a href="{% url 'movie' %}">Movies</a></li>
-                     <li><a href="{% url 'show' %}">Tv Shows</a></li>
+                     <li><a href="{% url 'movie-category' %}">Movies</a></li>
+                     <li><a href="{% url 'show-category' %}">Tv Shows</a></li>
                      <li><a href="#">Coporate Information</a></li>
                   </ul>
                </div>

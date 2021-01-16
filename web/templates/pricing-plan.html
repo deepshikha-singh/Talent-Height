@@ -49,10 +49,10 @@
                                             <a href="{% url 'index-2' %}">Home</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{% url 'show' %}">Tv Shows</a>
+                                            <a href="{% url 'show-category' %}">Tv Shows</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="{% url 'movie' %}">Movies</a>
+                                            <a href="{% url 'movie-category' %}">Movies</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -135,7 +135,7 @@
                                                 <div class="iq-sub-dropdown iq-user-dropdown">
                                                     <div class="iq-card shadow-none m-0">
                                                         <div class="iq-card-body p-0 pl-3 pr-3">
-                                                            <a href="{% url 'manage' %}"
+                                                            <a href="{% url 'manage-profile' %}"
                                                                 class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
@@ -156,7 +156,7 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="{% url 'pricing' %}"
+                                                            <a href="{% url 'pricing-plan' %}"
                                                                 class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
@@ -167,7 +167,7 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="{% url 'login' %}" class="iq-sub-card setting-dropdown">
+                                                            <a href="{% url 'signin' %}" class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
                                                                         <i class="ri-logout-circle-line text-primary"></i>
@@ -257,7 +257,7 @@
                                         <div class="iq-sub-dropdown iq-user-dropdown">
                                             <div class="iq-card shadow-none m-0">
                                                 <div class="iq-card-body p-0 pl-3 pr-3">
-                                                    <a href="{% url 'manage' %}" class="iq-sub-card setting-dropdown">
+                                                    <a href="{% url 'manage-profile' %}" class="iq-sub-card setting-dropdown">
                                                         <div class="media align-items-center">
                                                             <div class="right-icon">
                                                                 <i class="ri-file-user-line text-primary"></i>
@@ -277,7 +277,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="{% url 'pricing' %}" class="iq-sub-card setting-dropdown">
+                                                    <a href="{% url 'pricing-plan' %}" class="iq-sub-card setting-dropdown">
                                                         <div class="media align-items-center">
                                                             <div class="right-icon">
                                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -287,7 +287,7 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="{% url 'login' %}" class="iq-sub-card setting-dropdown">
+                                                    <a href="{% url 'signin' %}" class="iq-sub-card setting-dropdown">
                                                         <div class="media align-items-center">
                                                             <div class="right-icon">
                                                                 <i class="ri-logout-circle-line text-primary"></i>
@@ -427,8 +427,8 @@
                     <div class="col-lg-3 col-md-4">
                         <ul class="f-link list-unstyled mb-0">
                             <li><a href="#">About Us</a></li>
-                            <li><a href="{% url 'movie' %}">Movies</a></li>
-                            <li><a href="{% url 'show' %}">Tv Shows</a></li>
+                            <li><a href="{% url 'movie-category' %}">Movies</a></li>
+                            <li><a href="{% url 'show-category' %}">Tv Shows</a></li>
                             <li><a href="#">Coporate Information</a></li>
                         </ul>
                     </div>

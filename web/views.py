@@ -55,13 +55,13 @@ def log_out(request):
     messages.success(request, "Successfully Logged Out")   
     return redirect('index')
 
-def manage(request):
+def manage_profile(request):
     return render(request, 'manage-profile.html')
 
-def index2(request):
+def index_2(request):
     return render(request, 'index-2.html')
 
-def M_category(request):
+def movie_category(request):
     return render(request, 'movie-category.html')
 
 def M_details(request):
@@ -73,7 +73,7 @@ def pricing(request):
 def setting(request):
     return render(request, 'setting.html')
 
-def S_category(request):
+def show_category(request):
     return render(request, 'show-category.html')
 
 def S_details(request):
