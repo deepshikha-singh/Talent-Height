@@ -49,6 +49,9 @@
                                  <a href="{% url 'index' %}">Home</a>
                               </li>
                               <li class="menu-item">
+                                 <a href="{% url 'contact' %}">Contact Us</a>
+                              </li>
+                              <li class="menu-item">
                                  <a href="{% url 'show-category' %}">Tv Shows</a>
                               </li>
                               <li class="menu-item">
@@ -154,7 +157,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="{% url 'pricing' %}" class="iq-sub-card setting-dropdown">
+                                             <a href="{% url 'pricing-plan' %}" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-settings-4-line text-primary"></i>
@@ -164,7 +167,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="{% url 'login' %}" class="iq-sub-card setting-dropdown">
+                                             <a href="{% url 'signin' %}" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-logout-circle-line text-primary"></i>
@@ -270,7 +273,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="{% url 'pricing' %}" class="iq-sub-card setting-dropdown">
+                                       <a href="{% url 'pricing-plan' %}" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -280,7 +283,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="{% url 'login' %}" class="iq-sub-card setting-dropdown">
+                                       <a href="{% url 'signin' %}" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-logout-circle-line text-primary"></i>
@@ -308,7 +311,7 @@
    <section class="iq-main-slider p-0">
       <div id="tvshows-slider">
          <div>
-            <a href="{% url 's-details' %}">
+            <a href="{% url 'S_details' %}">
                <div class="shows-img">
                   <img src="{%static 'images/shows-banner/show-1.jpg' %}" class="w-100" alt="">
                   <div class="shows-content">
@@ -322,7 +325,7 @@
             </a>
          </div>
          <div>
-            <a href="{% url 's-details' %}">
+            <a href="{% url 'S_details' %}">
                <div class="shows-img">
                   <img src="{%static 'images/shows-banner/show-2.jpg' %}" class="w-100" alt="">
                   <div class="shows-content">
@@ -336,7 +339,7 @@
             </a>
          </div>
          <div>
-            <a href="{% url 's-details' %}">
+            <a href="{% url 'S_details' %}">
                <div class="shows-img">
                   <img src="{%static 'images/shows-banner/show-3.jpg' %}" class="w-100" alt="">
                   <div class="shows-content">
@@ -384,7 +387,7 @@
                   <div class="favorites-contens">
                      <ul class="favorites-slider list-inline  row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/01.jpg' %}" class="img-fluid" alt="">
@@ -411,7 +414,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/02.jpg' %}" class="img-fluid" alt="">
@@ -438,7 +441,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/03.jpg' %}" class="img-fluid" alt="">
@@ -465,7 +468,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/04.jpg' %}" class="img-fluid" alt="">
@@ -492,7 +495,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/05.jpg' %}" class="img-fluid" alt="">
@@ -534,7 +537,7 @@
                   <div class="upcoming-contens">
                      <ul class="favorites-slider list-inline  row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/06.jpg' %}" class="img-fluid" alt="">
@@ -562,7 +565,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/07.jpg' %}" class="img-fluid" alt="">
@@ -589,7 +592,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/08.jpg' %}" class="img-fluid" alt="">
@@ -616,7 +619,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/09.jpg' %}" class="img-fluid" alt="">
@@ -643,7 +646,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/03.jpg' %}" class="img-fluid" alt="">
@@ -670,7 +673,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-signle' %}">
+                           <a href="{% url 'signle' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/05.jpg' %}" class="img-fluid" alt="">
@@ -712,7 +715,7 @@
                   <div class="suggestede-contens">
                      <ul class="favorites-slider list-inline  row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/01.jpg' %}" class="img-fluid" alt="">
@@ -740,7 +743,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/08.jpg' %}" class="img-fluid" alt="">
@@ -767,7 +770,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/09.jpg' %}" class="img-fluid" alt="">
@@ -794,7 +797,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/05.jpg' %}" class="img-fluid" alt="">
@@ -821,7 +824,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="{% url 'show-single' %}">
+                           <a href="{% url 'single' %}">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="{%static 'images/tvthrillers/04.jpg' %}" class="img-fluid" alt="">

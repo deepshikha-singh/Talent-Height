@@ -1,0 +1,70 @@
+{% extends 'templating.html' %}
+{% load static %}
+
+{% block title %}
+   <title>Talent Height</title>
+	<meta name="title" content="Talent Height">
+   <meta name="description" content="Talent Height is the product of the company Talent Foster India Private Limited. 
+   It is the platform for all the talented artists across the world where they can show their talent (Singing, Dancing, Cooking, Teaching, etc.) and create their own audience for their healthy love and support. Online competitions are conducted here from time to time (which is entitled as INGENIOUS STAR) to bring out the best deserving winners amongst those registered artists. It is the platform(for 18 years and above) which not only gives you the golden scope to earn good amount of a money but also gives your talent a unique identity which acts as a booster to your motivation and passion to keep on flourishing gradually with every new content video of your talent and skill.">
+	<meta name="keywords" content="Entertainment, video sharing portal, music, video, dance, comedy">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta property="fb:app_id" content="1643990952546825">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+{% endblock %}
+
+{% block content %}
+<!-- MainContent -->
+<section class="sign-in-page">
+   <div class="container my-3">
+      <div class="row justify-content-center align-items-center height-self-center">
+         <div class="col-lg-5 col-md-12 align-self-center">
+            <div class="sign-user_card ">                    
+               <div class="sign-in-page-data">
+                  <div class="sign-in-from w-100 m-auto">
+                     <h3 class="mb-3 text-center">Contact Us</h3>
+                     <center>
+                        {% if messages %}
+
+                           {% for msg in messages %}
+                              <code> {{  msg  }} </code>
+                           {% endfor %}
+
+                        {% endif %}
+                     </center>
+                     <form action="{% url 'contact' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your Name" name="name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your Email" name="email">
+                            <small id="emailHelp" class="form-text text-muted">Your email-id is secure here.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number (with country code) </label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your Phone Number" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="content">Describe your issue :</label>
+                            <textarea class="form-control" name="content" id="content" placeholder="Your message......" name="message" cols="30" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                     </form>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- MainContent End-->
+{% endblock %}

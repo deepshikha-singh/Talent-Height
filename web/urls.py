@@ -31,8 +31,11 @@ urlpatterns = [
     path('show-details', views.S_details, name='S_details'),
     path('show-signle', views.signle, name='signle'),
     path('show-single', views.single, name='single'),
-    path('watch-video', views.watch, name='watch-video'),
+    path('watch-video', views.watch, name='watch'),
     path('logout/', views.logout, name='logout'),
+    path('signin/', views.signin, name='signin'),
+    path('contact/', views.contact, name='contact'),
+
 
 
 

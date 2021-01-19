@@ -10,7 +10,7 @@
       <!-- Favicon -->
       <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="{% static'css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
       <!-- Typography CSS -->
       <link rel="stylesheet" href="{% static 'css/typography.css' %}">
       <!-- Style -->
@@ -48,6 +48,9 @@
                               <ul id="top-menu" class="navbar-nav ml-auto">
                                  <li class="menu-item">
                                     <a href="{% url 'index-2' %}">Home</a>
+                                 </li>
+                                 <li class="menu-item">
+                                    <a href="{% url 'contact' %}">Contact Us</a>
                                  </li>
                                  <li class="menu-item">
                                     <a href="{% url 'show-category' %}">Tv Shows</a>
@@ -155,7 +158,7 @@
                                                       </div>
                                                    </div>
                                                 </a>
-                                                <a href="{% url 'pricing' %}" class="iq-sub-card setting-dropdown">
+                                                <a href="{% url 'pricing-plan' %}" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-settings-4-line text-primary"></i>
@@ -165,7 +168,7 @@
                                                       </div>
                                                    </div>
                                                 </a>
-                                                <a href="{% url 'login' %}" class="iq-sub-card setting-dropdown">
+                                                <a href="{% url 'signin' %}" class="iq-sub-card setting-dropdown">
                                                    <div class="media align-items-center">
                                                       <div class="right-icon">
                                                          <i class="ri-logout-circle-line text-primary"></i>
@@ -274,7 +277,7 @@
                                                 </div>
                                              </div>
                                           </a>
-                                          <a href="{% url 'pricing' %}" class="iq-sub-card setting-dropdown">
+                                          <a href="{% url 'pricing-plan' %}" class="iq-sub-card setting-dropdown">
                                              <div class="media align-items-center">
                                                 <div class="right-icon">
                                                    <i class="ri-settings-4-line text-primary"></i>
@@ -284,7 +287,7 @@
                                                 </div>
                                              </div>
                                           </a>
-                                          <a href="{% url 'login' %}" class="iq-sub-card setting-dropdown">
+                                          <a href="{% url 'signin' %}" class="iq-sub-card setting-dropdown">
                                              <div class="media align-items-center">
                                                 <div class="right-icon">
                                                    <i class="ri-logout-circle-line text-primary"></i>
@@ -331,9 +334,9 @@
                               dummy text ever since the 1500s.
                            </p>
                            <div class="d-flex align-items-center r-mb-23" data-animation-in="fadeInUp" data-delay-in="1.2">
-                              <a href="{% url 's-details' %}" class="btn btn-hover"><i class="fa fa-play mr-2"
+                              <a href="{% url 'S_details' %}" class="btn btn-hover"><i class="fa fa-play mr-2"
                                  aria-hidden="true"></i>Play Now</a>
-                              <a href="{% url 's-details' %}" class="btn btn-link">More details</a>
+                              <a href="{% url 'S_details' %}" class="btn btn-link">More details</a>
                            </div>
                         </div>
                      </div>
@@ -488,7 +491,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/favorite/02.jpg' %}" class="img-fluid" alt="">
@@ -545,7 +548,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/favorite/04.jpg' %}" class="img-fluid" alt="">
@@ -574,7 +577,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/favorite/05.jpg' %}" class="img-fluid" alt="">
@@ -968,7 +971,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/suggested/02.jpg' %}" class="img-fluid" alt="">
@@ -1022,7 +1025,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/suggested/04.jpg' %}" class="img-fluid" alt="">
@@ -1230,7 +1233,7 @@
                                              </p>
                                              <div class="p-btns">
                                                 <div class="d-flex align-items-center p-0">
-                                                   <a href="{% url 's-details' %}" class="btn btn-hover mr-2" tabindex="0"><i
+                                                   <a href="{% url 'S_details' %}" class="btn btn-hover mr-2" tabindex="0"><i
                                                       class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                    <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                    List</a>
@@ -1252,7 +1255,7 @@
                                        <div id="trending-data2" class="overlay-tab tab-pane fade">
                                           <div
                                              class="trending-info align-items-center w-100 animated fadeInUp">
-                                             <a href="{% url 's-details' %}" tabindex="0">
+                                             <a href="{% url 'S_details' %}" tabindex="0">
                                                 <div class="channel-logo">
                                                    <img src="{% static 'images/logo.png' %}" class="c-logo" alt="stramit">
                                                 </div>
@@ -1269,20 +1272,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1291,20 +1294,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">
@@ -1314,20 +1317,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1336,20 +1339,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1358,20 +1361,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1520,20 +1523,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1542,20 +1545,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1564,20 +1567,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1586,20 +1589,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1608,20 +1611,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1689,7 +1692,7 @@
                                              </p>
                                              <div class="p-btns">
                                                 <div class="d-flex align-items-center p-0">
-                                                   <a href="{% url 's-details' %}" class="btn btn-hover mr-2" tabindex="0"><i
+                                                   <a href="{% url 'S_details' %}" class="btn btn-hover mr-2" tabindex="0"><i
                                                       class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                    <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                    List</a>
@@ -1711,7 +1714,7 @@
                                        <div id="trending-data6" class="overlay-tab tab-pane fade">
                                           <div
                                              class="trending-info align-items-center w-100 animated fadeInUp">
-                                             <a href="{% url 's-details' %}" tabindex="0">
+                                             <a href="{% url 'S_details' %}" tabindex="0">
                                                 <div class="channel-logo">
                                                    <img src="{% static 'images/logo.png' %}" class="c-logo" alt="stramit">
                                                 </div>
@@ -1727,20 +1730,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1749,20 +1752,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1771,20 +1774,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1793,20 +1796,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1815,20 +1818,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1977,20 +1980,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -1999,20 +2002,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2021,20 +2024,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2043,20 +2046,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2065,20 +2068,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2146,7 +2149,7 @@
                                              </p>
                                              <div class="p-btns">
                                                 <div class="d-flex align-items-center p-0">
-                                                   <a href="{% url 's-details' %}" class="btn btn-hover mr-2" tabindex="0"><i
+                                                   <a href="{% url 'S_details' %}" class="btn btn-hover mr-2" tabindex="0"><i
                                                       class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                    <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                    List</a>
@@ -2168,7 +2171,7 @@
                                        <div id="trending-data10" class="overlay-tab tab-pane fade">
                                           <div
                                              class="trending-info align-items-center w-100 animated fadeInUp">
-                                             <a href="{% url 's-details' %}" tabindex="0">
+                                             <a href="{% url 'S_details' %}" tabindex="0">
                                                 <div class="channel-logo">
                                                    <img src="{% static 'images/logo.png' %}" class="c-logo" alt="stramit">
                                                 </div>
@@ -2185,20 +2188,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2207,20 +2210,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2229,20 +2232,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2251,20 +2254,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2273,20 +2276,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2435,20 +2438,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2457,20 +2460,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2479,20 +2482,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2501,20 +2504,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2523,20 +2526,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2604,7 +2607,7 @@
                                              </p>
                                              <div class="p-btns">
                                                 <div class="d-flex align-items-center p-0">
-                                                   <a href="{% url 's-details' %}" class="btn btn-hover mr-2" tabindex="0"><i
+                                                   <a href="{% url 'S_details' %}" class="btn btn-hover mr-2" tabindex="0"><i
                                                       class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                    <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                    List</a>
@@ -2626,7 +2629,7 @@
                                        <div id="trending-data14" class="overlay-tab tab-pane fade">
                                           <div
                                              class="trending-info align-items-center w-100 animated fadeInUp">
-                                             <a href="{% url 's-details' %}" tabindex="0">
+                                             <a href="{% url 'S_details' %}" tabindex="0">
                                                 <div class="channel-logo">
                                                    <img src="{% static 'images/logo.png' %}" class="c-logo" alt="stramit">
                                                 </div>
@@ -2642,20 +2645,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2664,20 +2667,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2686,20 +2689,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2708,20 +2711,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2730,20 +2733,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2892,20 +2895,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2914,20 +2917,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2936,20 +2939,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2958,20 +2961,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -2980,20 +2983,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3061,7 +3064,7 @@
                                              </p>
                                              <div class="p-btns">
                                                 <div class="d-flex align-items-center p-0">
-                                                   <a href="{% url 's-details' %}" class="btn btn-hover mr-2" tabindex="0"><i
+                                                   <a href="{% url 'S_details' %}" class="btn btn-hover mr-2" tabindex="0"><i
                                                       class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                    <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                    List</a>
@@ -3083,7 +3086,7 @@
                                        <div id="trending-data18" class="overlay-tab tab-pane fade">
                                           <div
                                              class="trending-info align-items-center w-100 animated fadeInUp">
-                                             <a href="{% url 's-details' %}" tabindex="0">
+                                             <a href="{% url 'S_details' %}" tabindex="0">
                                                 <div class="channel-logo">
                                                    <img src="{% static 'images/logo.png' %}" class="c-logo" alt="stramit">
                                                 </div>
@@ -3099,20 +3102,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3121,20 +3124,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3143,20 +3146,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3165,20 +3168,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3187,20 +3190,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3349,20 +3352,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3371,20 +3374,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3393,20 +3396,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3415,20 +3418,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3437,20 +3440,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3518,7 +3521,7 @@
                                              </p>
                                              <div class="p-btns">
                                                 <div class="d-flex align-items-center p-0">
-                                                   <a href="{% url 's-details' %}" class="btn btn-hover mr-2" tabindex="0"><i
+                                                   <a href="{% url 'S_details' %}" class="btn btn-hover mr-2" tabindex="0"><i
                                                       class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
                                                    <a href="javascript:void(0);" class="btn btn-link" tabindex="0"><i class="ri-add-line"></i>My
                                                    List</a>
@@ -3540,7 +3543,7 @@
                                        <div id="trending-data22" class="overlay-tab tab-pane fade">
                                           <div
                                              class="trending-info align-items-center w-100 animated fadeInUp">
-                                             <a href="{% url 's-details' %}" tabindex="0">
+                                             <a href="{% url 'S_details' %}" tabindex="0">
                                                 <div class="channel-logo">
                                                    <img src="{% static 'images/logo.png' %}" class="c-logo" alt="stramit">
                                                 </div>
@@ -3556,20 +3559,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3578,20 +3581,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3600,20 +3603,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3622,20 +3625,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3644,20 +3647,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3806,20 +3809,20 @@
                                                 <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 mb-0">
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/01.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">1</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 1</a>
+                                                            <a href="{% url 'S_details' %}">Episode 1</a>
                                                             <span class="text-primary">2.25 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3828,20 +3831,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/02.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">2</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 2</a>
+                                                            <a href="{% url 'S_details' %}">Episode 2</a>
                                                             <span class="text-primary">3.23 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3850,20 +3853,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/03.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">3</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 3</a>
+                                                            <a href="{% url 'S_details' %}">Episode 3</a>
                                                             <span class="text-primary">2 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3872,20 +3875,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/04.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">4</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 4</a>
+                                                            <a href="{% url 'S_details' %}">Episode 4</a>
                                                             <span class="text-primary">1.12 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3894,20 +3897,20 @@
                                                    </div>
                                                    <div class="e-item">
                                                       <div class="block-image position-relative">
-                                                         <a href="{% url 's-details' %}">
+                                                         <a href="{% url 'S_details' %}">
                                                          <img src="{% static 'images/episodes/05.jpg' %}" class="img-fluid" alt="">
                                                          </a>
                                                          <div class="episode-number">5</div>
                                                          <div class="episode-play-info">
                                                             <div class="episode-play">
-                                                               <a href="{% url 's-details' %}" tabindex="0"><i
+                                                               <a href="{% url 'S_details' %}" tabindex="0"><i
                                                                   class="ri-play-fill"></i></a>
                                                             </div>
                                                          </div>
                                                       </div>
                                                       <div class="episodes-description text-body mt-2">
                                                          <div class="d-flex align-items-center justify-content-between">
-                                                            <a href="{% url 's-details' %}">Episode 5</a>
+                                                            <a href="{% url 'S_details' %}">Episode 5</a>
                                                             <span class="text-primary">2.54 m</span>
                                                          </div>
                                                          <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
@@ -3938,7 +3941,7 @@
                      <div class="tvthrillers-contens">
                         <ul class="favorites-slider list-inline row p-0 mb-0">
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/tvthrillers/01.jpg' %}" class="img-fluid" alt="">
@@ -3965,7 +3968,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/tvthrillers/02.jpg' %}" class="img-fluid" alt="">
@@ -3992,7 +3995,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/tvthrillers/03.jpg' %}" class="img-fluid" alt="">
@@ -4019,7 +4022,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/tvthrillers/04.jpg' %}" class="img-fluid" alt="">
@@ -4046,7 +4049,7 @@
                               </a>
                            </li>
                            <li class="slide-item">
-                              <a href="{% url 's-details' %}">
+                              <a href="{% url 'S_details' %}">
                                  <div class="block-images position-relative">
                                     <div class="img-box">
                                        <img src="{% static 'images/tvthrillers/05.jpg' %}" class="img-fluid" alt="">

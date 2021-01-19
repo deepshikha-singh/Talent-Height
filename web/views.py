@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.models import User
 from django.contrib.auth import views as auth_views
@@ -50,9 +51,9 @@ def signin(request):
     else:
         return render(request, 'signin.html')
 
-def log_out(request):
+def logout(request):
     logout(request)
-    messages.success(request, "Successfully Logged Out")   
+    messages.info(request, "Successfully Logged Out")   
     return redirect('index')
 
 def manage_profile(request):
@@ -89,4 +90,27 @@ def watch(request):
     return render(request, 'watch-video.html')
 
 def showlist(request):
-    return render(request, "index.html")
+    return render(request, "index.html") 
+
+def contact(request):
+    if request.method=="POST":
+        try:
+            name=request.POST['name']
+            email=request.POST['email']
+            phone=request.POST['phone']
+            content =request.POST['content']
+            contact=Contact()
+            contact.name = name
+            contact.email = email
+            contact.phone = phone
+            contact.content = content
+            contact.save()
+            messages.success(request,'Success')
+            return render(request, "contact.html") 
+        except Exception as e:
+            messages.error(request,'Error: '+str(e))
+            print('Error: '+str(e))
+            return render(request, "contact.html") 
+    else:
+        return render(request, "contact.html") 
+
